@@ -1,0 +1,7 @@
+name: SnowLayers
+main: me.antigeddon.snowlayers.sMain
+version: 1.0
+permissions:
+  snowlayers.place:
+    description: Place snow layer on another to increase its height (like in modern MC).
+    default: true
