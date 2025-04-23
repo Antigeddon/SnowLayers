@@ -26,19 +26,21 @@ public class sSnow implements Listener {
         Block clicked = event.getClickedBlock();
         ItemStack inHand = player.getItemInHand();
 
+
+        if (clicked == null || clicked.getType() != Material.SNOW) return;
+        if (inHand == null || inHand.getType() != Material.SNOW) return;
+
+
         if (!player.hasPermission("snowlayers.place")) {
             event.setCancelled(true);
             return;
         }
 
-
-        if (clicked == null || clicked.getType() != Material.SNOW) return;
-        if (inHand == null || inHand.getType() != Material.SNOW) return;
-
         if (event.getBlockFace() != BlockFace.UP) {
             event.setCancelled(true);
             return;
         }
+
 
         // Max Height
         if (clicked.getData() == 7 || clicked.getData() == 15) {
