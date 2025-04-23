@@ -1,1 +1,1 @@
-#Place snow layer on another to increase its height (like in modern MC).
+A plugin that allows players to place snow layers on top of each other to increase their height, like in modern Minecraft.
