@@ -31,7 +31,7 @@ public class sSnow implements Listener {
         if (inHand == null || inHand.getType() != Material.SNOW) return;
 
 
-        if (!player.hasPermission("snowlayers.place")) {
+        if (!player.isOp() && !player.hasPermission("snowlayers.place")) {
             event.setCancelled(true);
             return;
         }
